@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STYLECART - Online Shopping</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="siteHeader">
+    <div class="brandRow">
+      <div class="brandMark">S</div>
+      <div class="brandText">
+        <h1>STYLECART<span>.</span></h1>
+        <p>Find your style. Make it yours.</p>
+      </div>
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <button class="navShopButton" onclick="showCart()">🛒 Cart (<span id="cartCount">0</span>)</button>
+      <button class="navShopButton" onclick="showWishlist()">♡ Wishlist (<span id="wishCount">0</span>)</button>
+      <button class="navShopButton" onclick="showOrders()">📦 My Orders</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="heroText">
+        <p class="eyebrow">NEW SEASON · NEW YOU</p>
+        <h2>Discover your<br><span>everyday style.</span></h2>
+        <p class="heroDescription">A little something for every version of you. Explore fashion, beauty and lifestyle favourites at one place.</p>
+        <a class="mainButton" href="#products">Explore Collection <span>→</span></a>
+        <p class="heroNote">✨ Easy shopping · Great everyday finds</p>
+      </div>
+      <div class="heroVisual" aria-label="StyleCart fashion collection decoration">
+        <div class="heroCircle circleOne"></div>
+        <div class="heroCircle circleTwo"></div>
+        <div class="heroCard">
+          <span class="heroCardSmall">STYLE EDIT</span>
+          <strong>YOUR<br>STYLE.<br>YOUR WAY.</strong>
+          <span class="heroCardLine"></span>
+          <span class="heroCardBottom">STYLECART · 2026</span>
+        </div>
+        <div class="floatingTag">Made for you ♡</div>
+      </div>
+    </section>
+
+    <section class="intro">
+      <h2>Shop by Category</h2>
+      <div class="categoryChips">
+        <span class="categoryChip" aria-label="Women">Women</span><span class="categoryChip" aria-label="Men">Men</span>
+        <span class="categoryChip" aria-label="Kids">Kids</span><span class="categoryChip" aria-label="Beauty">Beauty</span>
+        <span class="categoryChip" aria-label="Home">Home</span><span class="categoryChip" aria-label="Footwear">Footwear</span>
+        <span class="categoryChip" aria-label="Accessories">Accessories</span><span class="categoryChip" aria-label="View All">View All</span>
+      </div>
+    </section>
+
+    <section id="products">
+      <h2>Our Products</h2>
+      <input id="searchBox" type="text" placeholder="Search products..." oninput="displayProducts()">
+      <select id="categoryFilter" onchange="displayProducts()">
+        <option value="All">All Categories</option>
+        <option>Women</option><option>Men</option><option>Kids</option>
+        <option>Beauty</option><option>Home</option><option>Footwear</option><option>Accessories</option>
+      </select>
+      <div id="productList" class="productGrid"></div>
+    </section>
+
+    <section id="about" class="about">
+      <h2>About STYLECART</h2>
+      <p>STYLECART is a sample online shopping website made using HTML, CSS and JavaScript.
+      It lets customers explore products, save favourites and create demo orders.</p>
+    </section>
+    <section id="storePanel" class="storePanel" hidden aria-live="polite">
+      <div class="panelHeading"><h2 id="panelTitle">Your Account</h2><button class="closeButton" onclick="closePanel()">✕ Close</button></div>
+      <div id="panelContent"></div>
+    </section>
+  </main>
+
+  <footer><p>© 2026 STYLECART | Student E-commerce Project</p></footer>
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
